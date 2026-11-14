@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FleetControl: control de flota, viajes, gastos y entregas de dinero.">
+  <meta name="theme-color" content="#060d1c">
+  <title>FleetControl</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230f8c7d'/%3E%3Ccircle cx='22' cy='10' r='4' fill='%23ffffff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Inicio de sesión -->
+  <section id="login" class="login hidden">
+    <aside class="login-hero" aria-hidden="true">
+      <div class="login-marca">
+        <span class="logo"></span>
+        <div>
+          <strong>FleetControl</strong>
+          <small>Flota, viajes y control financiero</small>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Control que mueve tu empresa</p>
+        <h2>Cada viaje, cada gasto y cada peso bajo control.</h2>
+        <p class="hero-texto">Centraliza la operación diaria de tu flota y toma decisiones con información clara, confiable y oportuna.</p>
+      </div>
+      <ul class="login-features">
+        <li><span class="feature-dot"></span>Vehículos, conductores y viajes en un solo lugar</li>
+        <li><span class="feature-dot"></span>Revisión de comprobantes y aprobación de gastos</li>
+        <li><span class="feature-dot"></span>Conciliación de entregas de dinero por viaje</li>
+      </ul>
+    </aside>
+
+    <div class="login-side">
+      <div class="login-panel">
+        <div class="login-marca-movil">
+          <span class="logo"></span>
+          <strong>FleetControl</strong>
+        </div>
+        <form id="form-login" class="card login-card" novalidate>
+          <p class="eyebrow">Bienvenido de nuevo</p>
+          <h1>Inicia sesión en tu cuenta</h1>
+          <p class="nota">Usa las credenciales que te entregó la administración.</p>
+          <label>Correo electrónico
+            <input type="email" name="correo" required autocomplete="username" placeholder="nombre@empresa.com">
+          </label>
+          <label>Contraseña
+            <input type="password" name="password" required autocomplete="current-password">
+          </label>
+          <p id="login-error" class="error hidden" role="alert"></p>
+          <button type="submit" class="btn primario bloque">Ingresar al sistema</button>
+        </form>
+        <p class="pie-login">Prototipo académico · Los datos mostrados son de demostración</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aplicación autenticada -->
+  <section id="app" class="app hidden">
+    <aside class="menu">
+      <div class="marca">
+        <span class="logo" aria-hidden="true"></span>
+        <span>FleetControl</span>
+      </div>
+      <p class="menu-etiqueta">Operación</p>
+      <nav id="nav" aria-label="Navegación principal"></nav>
+      <div class="pie-menu">
+        <div class="usuario">
+          <span class="avatar" id="avatar-ini" aria-hidden="true"></span>
+          <span>
+            <strong id="usuario-nombre"></strong>
+            <small id="usuario-rol"></small>
+          </span>
+        </div>
+        <button id="salir" class="btn secundario mini">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <main>
+      <header class="barra">
+        <div class="cabecera">
+          <p class="migas">FleetControl <span>/</span> <span id="migas-actual"></span></p>
+          <h1 id="titulo"></h1>
+        </div>
+        <div class="barra-der">
+          <span id="rol-badge" class="rol"></span>
+        </div>
+      </header>
+      <div id="notificacion" class="notificacion hidden" role="status"></div>
+      <div id="vista"></div>
+    </main>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

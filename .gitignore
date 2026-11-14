@@ -1,0 +1,20 @@
+# Compilados y artefactos de Maven
+backend/target/
+*.class
+
+# Volcados de error de la JVM
+hs_err_pid*.log
+
+# Archivos de comprobantes subidos (datos privados)
+backend/storage/
+storage/
+
+# Configuración local con contraseñas
+.env
+*.local.properties
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
