@@ -1,5 +1,5 @@
 /* FleetControl: cliente web. Se comunica solo con la API del backend (RNF-04). */
-const API = 'http://localhost:8080/api';
+const API = (window.FC_CONFIG && window.FC_CONFIG.apiUrl) || 'http://localhost:8080/api';
 const ESTADOS_VEHICULO = ['DISPONIBLE', 'EN_SERVICIO', 'MANTENIMIENTO', 'INACTIVO'];
 const ESTADOS_VIAJE = ['PROGRAMADO', 'EN_CURSO', 'COMPLETADO', 'CANCELADO'];
 const TIPOS_SERVICIO = ['INTERMUNICIPAL', 'PUERTA_A_PUERTA'];
